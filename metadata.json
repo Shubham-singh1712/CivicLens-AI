@@ -1,0 +1,6 @@
+{
+  "name": "CivicLens AI",
+  "description": "An AI-powered civic intelligence platform that analyzes citizen issues, estimates severity, structures complaints, and predicts escalation risk using Gemini.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

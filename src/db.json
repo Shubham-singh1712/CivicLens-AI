@@ -1,0 +1,150 @@
+[
+  {
+    "id": "seed-1",
+    "title": "Severe Road Asphalt Erosion & Water Main Burst",
+    "description": "Water is gushing out of a deep asphalt fracture on Elm Street. It's washing away the gravel sub-base of the road and flooding the sidewalks. Massive sinkhole forming.",
+    "imageUrl": "https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=800&q=80",
+    "status": "in_progress",
+    "category": "Water & Sewer",
+    "address": "742 Elm Street, Ward 4",
+    "createdAt": "2026-06-23T22:54:58.650Z",
+    "upvotes": 42,
+    "verifiedByCount": 18,
+    "timeline": [
+      {
+        "status": "reported",
+        "date": "2026-06-23T22:54:58.651Z",
+        "note": "Issue logged by citizen with photo attachment."
+      },
+      {
+        "status": "under_review",
+        "date": "2026-06-24T00:54:58.651Z",
+        "note": "CivicLens AI Vision Agent classified the severity as CRITICAL and designated Department of Water & Sanitation."
+      },
+      {
+        "status": "scheduled",
+        "date": "2026-06-24T04:54:58.651Z",
+        "note": "Main line isolation crew dispatched. Repair scheduled."
+      },
+      {
+        "status": "in_progress",
+        "date": "2026-06-24T22:54:58.651Z",
+        "note": "Crews on site. Shutoff valve active. Excavating road bed to replace damaged 12-inch conduit."
+      }
+    ],
+    "analysis": {
+      "vision": {
+        "category": "Water Infrastructure Failure",
+        "severity": "Critical",
+        "confidence": 96,
+        "riskAssessment": "High volume water runoff is eroding the road subgrade rapidly. Deep asphalt collapse poses major tire-impact/vehicle hazard. Adjacent basement flooding highly probable within hours.",
+        "summary": "Multimodal analysis shows a fractured municipal main line discharging pressurized water directly through the roadway pavement. Subgrade sand and gravel are actively washing down current."
+      },
+      "resolution": {
+        "responsibleAuthority": "Department of Water and Sanitation & Roadway Maintenance",
+        "recommendedAction": "Execute emergency valve isolation. Set up barricades on Elm St between 3rd & 5th. Coordinate with Power utility to verify underground lines prior to deep excavating.",
+        "priority": "Immediate",
+        "estimatedResolutionTime": "12-18 Hours"
+      },
+      "prediction": {
+        "escalationProbability": 92,
+        "impactForecast": "If un-isolated, total road structural failure will occur, forming a 4-meter wide sinkhole. Flooding will short circuit electrical conduits in the adjacent distribution vault, causing a localized blackout for 120 residential homes.",
+        "suggestedPreventiveAction": "Pre-emptively divert all traffic. Sandbag the pedestrian pathways at 740 and 744 Elm Street immediately."
+      }
+    },
+    "lat": 37.7749,
+    "lng": -122.4194
+  },
+  {
+    "id": "seed-2",
+    "title": "Large Concrete Pothole with Exposed Rebar",
+    "description": "Deep pothole in the left commuter lane of the expressway. Exposed rusted metal rebar is sticking straight up and has already punctured at least two car tires this morning. Extremely dangerous at night.",
+    "imageUrl": "https://images.unsplash.com/photo-1599740831144-530ba1129310?auto=format&fit=crop&w=800&q=80",
+    "status": "scheduled",
+    "category": "Road Infrastructure",
+    "address": "I-90 Expressway Westbound, Mile Marker 14.2",
+    "createdAt": "2026-06-24T16:54:58.651Z",
+    "upvotes": 27,
+    "verifiedByCount": 9,
+    "timeline": [
+      {
+        "status": "reported",
+        "date": "2026-06-24T16:54:58.651Z",
+        "note": "Reported by motorist via high-speed transit dashcam snapshot."
+      },
+      {
+        "status": "under_review",
+        "date": "2026-06-24T18:54:58.651Z",
+        "note": "Vision Agent flagged exposed steel rebar. Categorized as HIGH severity."
+      },
+      {
+        "status": "scheduled",
+        "date": "2026-06-25T04:54:58.651Z",
+        "note": "Expressway Highway Patrol notified. Asphalt patching team scheduled to apply cold-pour emergency compound tonight at 11 PM."
+      }
+    ],
+    "analysis": {
+      "vision": {
+        "category": "Expressway Surface Degradation",
+        "severity": "High",
+        "confidence": 91,
+        "riskAssessment": "Metal reinforcing rods are bent upwards. Driving over this at 60mph guarantees tire blowouts and potential loss of vehicle control. Visible degradation suggests concrete delamination.",
+        "summary": "Expressway wearing course completely eroded down to the base slab. Rusted structural rebar exposed, creating sharp projectiles directly in the path of commuter traffic."
+      },
+      "resolution": {
+        "responsibleAuthority": "State Department of Transportation (DOT)",
+        "recommendedAction": "Deploy Highway Safety Vehicle to close the left lane. Cut protruding rebar flush, clear loose debris, and apply rapid-cure elastomeric concrete patch.",
+        "priority": "High",
+        "estimatedResolutionTime": "24-36 Hours"
+      },
+      "prediction": {
+        "escalationProbability": 78,
+        "impactForecast": "With oncoming rain tomorrow, water ingress into the surrounding concrete fractures will accelerate freeze-thaw sub-slab cavitation, widening the pothole by 40% and increasing tire blowout incidence exponentially.",
+        "suggestedPreventiveAction": "Place reflective cones 100 meters upstream. Force immediate lane-merge instructions on electronic expressway signage."
+      }
+    },
+    "lat": 37.7801,
+    "lng": -122.4095
+  },
+  {
+    "id": "seed-3",
+    "title": "Illegal Toxic Waste & Battery Dumping",
+    "description": "About 15 heavy car batteries and chemical containers dumped near the creek path. Some batteries appear cracked and are leaking dark acid directly onto the soil and towards the water.",
+    "imageUrl": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=800&q=80",
+    "status": "reported",
+    "category": "Waste & Sanitation",
+    "address": "Oak Creek Trail, North trailhead parking lot",
+    "createdAt": "2026-06-25T06:54:58.651Z",
+    "upvotes": 19,
+    "verifiedByCount": 4,
+    "timeline": [
+      {
+        "status": "reported",
+        "date": "2026-06-25T06:54:58.651Z",
+        "note": "Logged by local trail-runner. Toxic waste warning flags activated."
+      }
+    ],
+    "analysis": {
+      "vision": {
+        "category": "Hazardous Materials Dumping",
+        "severity": "High",
+        "confidence": 89,
+        "riskAssessment": "Lead-acid cells contain sulfuric acid and heavy metals. Direct soil leaching poses immediate contamination risk to the local Oak Creek ecosystem located only 20 feet away.",
+        "summary": "Visual evidence of illegal dumping of lead-acid automotive batteries and chemical drums. Corrosion is present, and chemical discharge rings are visible in the surrounding dirt."
+      },
+      "resolution": {
+        "responsibleAuthority": "Environmental Protection Agency (EPA) & Municipal Hazmat response",
+        "recommendedAction": "Deploy hazardous waste neutralization team. Excavate contaminated topsoil. Check creek pH levels immediately upstream and downstream of the dump site.",
+        "priority": "High",
+        "estimatedResolutionTime": "1-2 Days"
+      },
+      "prediction": {
+        "escalationProbability": 80,
+        "impactForecast": "Lead and sulfuric acid will enter the aquifer, raising local water acidity levels. Toxic heavy metals will bioaccumulate in Oak Creek trout, leading to park-wide fishing bans and local wildlife mortality.",
+        "suggestedPreventiveAction": "Rope off the trail path. Cover the batteries with acid-neutralizing dry lime powder and a waterproof tarp to prevent rain-driven run-off."
+      }
+    },
+    "lat": 37.765,
+    "lng": -122.428
+  }
+]
