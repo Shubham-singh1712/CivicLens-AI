@@ -46,12 +46,12 @@ const TOUR_STEPS = [
     targetTab: "dashboard"
   },
   {
-    title: "Access the Judge & Hackathon Hub",
+    title: "Access the AI Command Center",
     badge: "ARCHITECTURAL BLUEPRINT",
     icon: Layers,
     color: "text-emerald-400 border-emerald-500/20 bg-emerald-950/30",
-    desc: "We built an interactive 'Judge Portal' directly into the navigation bar! Explore our live system topology, pitch layouts, criteria mappings, and 3-minute presentation scripts.",
-    actionLabel: "Open the Judge Portal",
+    desc: "We built an interactive AI Command Center directly into the navigation bar! Explore our live system topology, pitch layouts, criteria mappings, and 3-minute presentation scripts.",
+    actionLabel: "Open the AI Command Center",
     targetTab: "hackathon"
   }
 ];

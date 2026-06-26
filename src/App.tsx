@@ -295,6 +295,7 @@ export default function App() {
                   onAddComment={(author, text) => handleAddComment(selectedIssue.id, author, text)}
                   onAddImage={(imageUrl) => handleAddImage(selectedIssue.id, imageUrl)}
                   onSelectIssue={setSelectedIssue}
+                  setActiveTab={setActiveTab}
                 />
               )}
 
