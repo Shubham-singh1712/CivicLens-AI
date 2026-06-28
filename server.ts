@@ -4,7 +4,7 @@ import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
-import { analyzeVisionAgent } from "./src/services/gemini";
+import { analyzeVisionAgent, analyzeProjectSubmission } from "./src/services/gemini";
 import {
   generatePredictionAgent,
   detectDuplicates,
@@ -67,7 +67,7 @@ const INITIAL_ISSUES = [
     id: "seed-2",
     title: "Large Concrete Pothole with Exposed Rebar",
     description: "Deep pothole in the left commuter lane of the expressway. Exposed rusted metal rebar is sticking straight up and has already punctured at least two car tires this morning. Extremely dangerous at night.",
-    imageUrl: "https://images.unsplash.com/photo-1599740831144-530ba1129310?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/concrete_spall.jpg",
     status: "scheduled",
     category: "Road Infrastructure",
     address: "I-90 Expressway Westbound, Mile Marker 14.2",
@@ -104,7 +104,7 @@ const INITIAL_ISSUES = [
     id: "seed-3",
     title: "Illegal Toxic Waste & Battery Dumping",
     description: "About 15 heavy car batteries and chemical containers dumped near the creek path. Some batteries appear cracked and are leaking dark acid directly onto the soil and towards the water.",
-    imageUrl: "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80",
     status: "reported",
     category: "Waste & Sanitation",
     address: "Oak Creek Trail, North trailhead parking lot",
@@ -653,6 +653,21 @@ app.post("/api/issues/:id/resolve", (req, res) => {
   issues[idx] = issue;
   writeDB(issues);
   res.json(issue);
+});
+
+// POST Analyze Hackathon Submission
+app.post("/api/hackathon/submit", async (req, res) => {
+  try {
+    const submission = req.body;
+    if (!submission) {
+      return res.status(400).json({ error: "Missing submission payload" });
+    }
+    const result = await analyzeProjectSubmission(submission);
+    res.json(result);
+  } catch (error: any) {
+    console.error("Hackathon analysis endpoint failed:", error);
+    res.status(500).json({ error: error?.message || "Internal submission analysis error." });
+  }
 });
 
 // GET Trend Analysis

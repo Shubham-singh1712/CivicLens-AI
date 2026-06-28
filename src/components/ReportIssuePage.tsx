@@ -20,7 +20,7 @@ const SAMPLE_PRESETS = [
     description: "Deep roadway collapse has formed a dangerous sinkhole right outside the Oakridge Elementary crosswalk. Gravel base is sliding down, and the pavement edge is crumbling.",
     address: "2440 Oakridge Lane, next to Elementary school gate",
     category: "Road Infrastructure",
-    imageUrl: "https://images.unsplash.com/photo-1599740831144-530ba1129310?auto=format&fit=crop&w=800&q=80"
+    imageUrl: "/concrete_spall.jpg"
   },
   {
     title: "Storm-Damaged Electrical Line Down",
@@ -224,11 +224,11 @@ export default function ReportIssuePage({ onSubmit, setActiveTab, setSelectedIss
             </p>
           </div>
 
-          {/* Preset Buttons for Demo */}
+          {/* Sample Report Presets */}
           <div className="space-y-3 p-4 bg-gray-950/40 border border-gray-900 rounded-xl">
             <div className="text-xs font-mono text-gray-400 flex items-center gap-1">
               <Cpu className="w-3.5 h-3.5 text-cyan-400" />
-              <span>HACKATHON QUICK DEMO PRESETS:</span>
+              <span>QUICK REPORT PRESETS:</span>
             </div>
             <div className="flex flex-wrap gap-2.5">
               {SAMPLE_PRESETS.map((preset, idx) => (

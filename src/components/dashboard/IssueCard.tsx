@@ -3,6 +3,7 @@ import { MapPin, Calendar, ThumbsUp, CheckCircle, ShieldAlert, Cpu, Eye, ArrowRi
 import { CivicIssue } from "../../types";
 import PriorityBadge from "./PriorityBadge";
 import VerificationWidget from "./VerificationWidget";
+import { IssueImage } from "../common/IssueImage";
 
 interface IssueCardProps {
   key?: string;
@@ -72,10 +73,10 @@ export default function IssueCard({ issue, onSelect, onVerify, onNotAccurate }: 
     >
       {/* Visual Header / Image container */}
       <div className="relative h-44 shrink-0 bg-gray-900 overflow-hidden">
-        <img 
+        <IssueImage 
           src={issue.imageUrl} 
           alt={issue.title} 
-          referrerPolicy="no-referrer"
+          title={issue.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-black/40"></div>

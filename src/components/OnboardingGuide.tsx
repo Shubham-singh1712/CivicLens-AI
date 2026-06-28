@@ -20,10 +20,10 @@ interface OnboardingGuideProps {
 const TOUR_STEPS = [
   {
     title: "Welcome to CivicLens AI",
-    badge: "JUDGING PREPARATION",
+    badge: "CORE CAPABILITIES",
     icon: Sparkles,
     color: "text-cyan-400 border-cyan-500/20 bg-cyan-950/30",
-    desc: "Welcome to the future of urban safety. CivicLens is a multi-agent defense system powered by Google Gemini 3.5 Flash that automates civic hazard analysis, safety profiling, and emergency dispatches.",
+    desc: "Welcome to the future of urban safety. CivicLens is an enterprise multi-agent operations system powered by Google Gemini 3.5 Flash that automates civic hazard analysis, safety profiling, and emergency dispatches.",
     actionLabel: "Start Guided Tour",
     targetTab: "landing"
   },
@@ -47,10 +47,10 @@ const TOUR_STEPS = [
   },
   {
     title: "Access the AI Command Center",
-    badge: "ARCHITECTURAL BLUEPRINT",
+    badge: "SYSTEM TOPOLOGY",
     icon: Layers,
     color: "text-emerald-400 border-emerald-500/20 bg-emerald-950/30",
-    desc: "We built an interactive AI Command Center directly into the navigation bar! Explore our live system topology, pitch layouts, criteria mappings, and 3-minute presentation scripts.",
+    desc: "Explore our real-time AI Command Center containing live system status, autonomous pipeline sequences, terminal thinking traces, and regional resource forecasts.",
     actionLabel: "Open the AI Command Center",
     targetTab: "hackathon"
   }
@@ -76,6 +76,7 @@ export default function OnboardingGuide({ activeTab, setActiveTab }: OnboardingG
       setActiveTab(TOUR_STEPS[nextIdx].targetTab);
     } else {
       setIsOpen(false);
+      setActiveTab("dashboard");
     }
   };
 
@@ -94,7 +95,7 @@ export default function OnboardingGuide({ activeTab, setActiveTab }: OnboardingG
   return (
     <>
       {/* PERSISTENT LAUNCHER FLOATING BUTTON */}
-      {!isOpen && (
+      {!isOpen && activeTab !== "hackathon" && (
         <button
           onClick={() => {
             setIsOpen(true);
@@ -105,7 +106,7 @@ export default function OnboardingGuide({ activeTab, setActiveTab }: OnboardingG
           id="onboarding-tour-launcher"
         >
           <HelpCircle className="w-4 h-4 text-white" />
-          <span>Interactive Judge Tour</span>
+          <span>Interactive System Tour</span>
         </button>
       )}
 
@@ -122,7 +123,10 @@ export default function OnboardingGuide({ activeTab, setActiveTab }: OnboardingG
             >
               {/* Close Button */}
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  setActiveTab("dashboard");
+                }}
                 className="absolute top-4 right-4 p-1 rounded-lg text-gray-500 hover:text-gray-300 hover:bg-gray-900 transition-all cursor-pointer"
               >
                 <X className="w-4 h-4" />

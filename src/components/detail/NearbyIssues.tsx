@@ -9,6 +9,7 @@ import {
   RefreshCw 
 } from "lucide-react";
 import { CivicIssue } from "../../types";
+import { IssueImage } from "../common/IssueImage";
 
 interface NearbyIssuesProps {
   currentIssue: CivicIssue;
@@ -109,10 +110,10 @@ export default function NearbyIssues({ currentIssue, allIssues, onSelectRelated 
               return (
                 <div key={item.id} className="p-3 bg-gray-950/60 border border-gray-900 rounded-xl flex items-center justify-between gap-4">
                   <div className="flex gap-2.5 min-w-0">
-                    <img
+                    <IssueImage
                       src={item.imageUrl}
                       alt={item.title}
-                      referrerPolicy="no-referrer"
+                      title={item.title}
                       className="w-10 h-10 object-cover rounded-lg border border-gray-900 shrink-0"
                     />
                     <div className="min-w-0 text-xs">
@@ -161,10 +162,10 @@ export default function NearbyIssues({ currentIssue, allIssues, onSelectRelated 
                 onClick={() => onSelectRelated(issue)}
                 className="bg-gray-950/30 hover:bg-gray-950/60 border border-gray-900 hover:border-gray-850 p-3 rounded-xl flex gap-3 cursor-pointer transition-all group"
               >
-                <img
+                <IssueImage
                   src={issue.imageUrl}
                   alt={issue.title}
-                  referrerPolicy="no-referrer"
+                  title={issue.title}
                   className="w-12 h-12 object-cover rounded-lg border border-gray-900 shrink-0"
                 />
                 <div className="min-w-0 space-y-1 text-xs text-left flex-1">

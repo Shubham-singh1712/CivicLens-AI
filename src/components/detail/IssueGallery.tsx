@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Image, UploadCloud, Plus, Camera, Loader2, Check } from "lucide-react";
 import { CivicIssue } from "../../types";
+import { IssueImage } from "../common/IssueImage";
 
 interface IssueGalleryProps {
   issue: CivicIssue;
@@ -37,9 +38,9 @@ export default function IssueGallery({ issue, onAddImage }: IssueGalleryProps) {
     }
   };
 
-  // Preset demo attachments for fast review
+  // Preset attachments for fast verification
   const PRESET_ATTACHMENTS = [
-    "https://images.unsplash.com/photo-1599740831144-530ba1129310?auto=format&fit=crop&w=800&q=80",
+    "/concrete_spall.jpg",
     "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80"
   ];
 
@@ -61,10 +62,10 @@ export default function IssueGallery({ issue, onAddImage }: IssueGalleryProps) {
     <div id={`issue-gallery-${issue.id}`} className="space-y-4">
       {/* Featured Large View */}
       <div className="rounded-2xl overflow-hidden border border-gray-800 bg-gray-950 h-80 sm:h-96 relative shadow-xl">
-        <img 
+        <IssueImage 
           src={activeImage} 
           alt={issue.title} 
-          referrerPolicy="no-referrer"
+          title={issue.title}
           className="w-full h-full object-cover transition-all duration-300" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950/70 via-transparent to-black/20 pointer-events-none"></div>
@@ -86,7 +87,7 @@ export default function IssueGallery({ issue, onAddImage }: IssueGalleryProps) {
                 : "border-gray-850 hover:border-gray-700"
             }`}
           >
-            <img src={imgUrl} alt={`Thumbnail ${index + 1}`} referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+            <IssueImage src={imgUrl} alt={`Thumbnail ${index + 1}`} title={issue.title} className="w-full h-full object-cover" />
           </button>
         ))}
 
@@ -140,9 +141,9 @@ export default function IssueGallery({ issue, onAddImage }: IssueGalleryProps) {
             </button>
           </div>
 
-          {/* Quick Demo Assist Preset Images */}
+          {/* Quick Assist Preset Images */}
           <div className="space-y-1.5 pt-1 border-t border-gray-900/40">
-            <span className="text-[8px] font-mono text-gray-600 uppercase block">Fast Demo Presets:</span>
+            <span className="text-[8px] font-mono text-gray-600 uppercase block">Fast Verification Presets:</span>
             <div className="flex gap-2">
               {PRESET_ATTACHMENTS.map((url, idx) => (
                 <button

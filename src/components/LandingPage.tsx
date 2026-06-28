@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, ShieldAlert, Sparkles, TrendingUp, Cpu, Eye, CheckCircle2, AlertTriangle } from "lucide-react";
 import { CivicIssue } from "../types";
+import { IssueImage } from "./common/IssueImage";
 
 interface LandingPageProps {
   setActiveTab: (tab: string) => void;
@@ -80,17 +81,17 @@ export default function LandingPage({ setActiveTab, recentIssues, setSelectedIss
               <div className="flex items-center justify-between border-b border-gray-800 pb-4 mb-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
-                  <span className="text-xs font-mono text-gray-400">ACTIVE AI DISPATCH DEMO</span>
+                  <span className="text-xs font-mono text-gray-400">ACTIVE AI DISPATCH MONITOR</span>
                 </div>
                 <span className="text-[10px] bg-red-950/50 text-red-400 border border-red-900/60 px-2 py-0.5 rounded font-mono">CRITICAL CRISIS</span>
               </div>
 
               {/* Sample analyzed issue snapshot */}
               <div className="space-y-4">
-                <img 
+                <IssueImage 
                   src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=600&q=80" 
                   alt="Civic Hazard Sample" 
-                  referrerPolicy="no-referrer"
+                  title="Main Street Flooding Event"
                   className="w-full h-44 object-cover rounded-xl border border-gray-800"
                 />
                 
@@ -218,10 +219,10 @@ export default function LandingPage({ setActiveTab, recentIssues, setSelectedIss
                 className="glass-panel glass-panel-hover p-4 rounded-xl cursor-pointer flex flex-col gap-4 text-left border border-gray-800 group"
               >
                 <div className="relative">
-                  <img 
+                  <IssueImage 
                     src={issue.imageUrl} 
                     alt={issue.title} 
-                    referrerPolicy="no-referrer"
+                    title={issue.title}
                     className="w-full h-36 object-cover rounded-lg border border-gray-900 group-hover:scale-[1.01] transition-transform duration-300"
                   />
                   <span className={`absolute top-2 right-2 text-[9px] font-mono font-bold px-2 py-0.5 rounded border ${

@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import { CivicIssue, DashboardMetrics } from "../types";
 import MapView from "./dashboard/MapView";
+import { IssueImage } from "./common/IssueImage";
 
 interface CommunityDashboardProps {
   issues: CivicIssue[];
@@ -310,10 +311,10 @@ export default function CommunityDashboard({
 
                     {/* Prominent High-Contrast Image container */}
                     <div className="relative h-72 w-full bg-gray-900 overflow-hidden">
-                      <img 
+                      <IssueImage 
                         src={issue.imageUrl}
                         alt={issue.title}
-                        referrerPolicy="no-referrer"
+                        title={issue.title}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-black/30"></div>
@@ -491,10 +492,10 @@ export default function CommunityDashboard({
                   onClick={() => onSelectIssue(item)}
                   className="flex gap-3 items-center group cursor-pointer hover:bg-gray-900/20 p-1.5 rounded-lg transition-colors border border-transparent hover:border-gray-900"
                 >
-                  <img
+                  <IssueImage
                     src={item.imageUrl}
                     alt={item.title}
-                    referrerPolicy="no-referrer"
+                    title={item.title}
                     className="w-12 h-12 object-cover rounded-lg border border-gray-900 shrink-0 group-hover:scale-105 transition-transform"
                   />
                   <div className="min-w-0 flex-grow text-left">

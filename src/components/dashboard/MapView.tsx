@@ -16,6 +16,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import { CivicIssue } from "../../types";
+import { IssueImage } from "../common/IssueImage";
 
 interface MapViewProps {
   issues: CivicIssue[];
@@ -416,10 +417,10 @@ export default function MapView({ issues, onSelectIssue }: MapViewProps) {
           {selectedPoint && (
             <div className="absolute bottom-4 left-4 right-4 bg-gray-950/95 border border-cyan-900/60 p-4 rounded-xl flex items-center justify-between gap-4 animate-slide-up shadow-xl backdrop-blur-md">
               <div className="flex gap-3.5 min-w-0">
-                <img
+                <IssueImage
                   src={selectedPoint.imageUrl}
                   alt={selectedPoint.title}
-                  referrerPolicy="no-referrer"
+                  title={selectedPoint.title}
                   className="w-14 h-14 object-cover rounded-lg border border-gray-900 shrink-0"
                 />
                 <div className="min-w-0 text-left space-y-1">

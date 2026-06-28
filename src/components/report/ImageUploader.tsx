@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Upload, X, FileImage, AlertCircle } from "lucide-react";
+import { IssueImage } from "../common/IssueImage";
 
 interface ImageUploaderProps {
   image: string | null;
@@ -114,7 +115,7 @@ export default function ImageUploader({ image, setImage, errorMsg, setErrorMsg }
 
       {image ? (
         <div id="uploader-preview" className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-950 h-56 group shadow-lg">
-          <img src={image} alt="Report Preview" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+          <IssueImage src={image} alt="Report Preview" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-350 flex items-center justify-center">
             <button
               type="button"
